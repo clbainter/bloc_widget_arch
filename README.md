@@ -4,6 +4,9 @@ building flutter applications. This package provides an assortment
 of abstract classes and utilities that seamlessly integrate with the 
 BLoC pattern, enabling you to create clear and maintainable code.
 
+## Important
+**Note:** This package requires iOS version 10.3 or higher for compatibility.
+
 ## Features
 
 - **BaseArchBloc:** An abstract class at the core of the Bloc Widget Architecture. It serves as a blueprint for structuring widgets that effectively interact with BLoCs. Extend this class to create widgets that respond to BLoC events and efficiently update the UI based on state changes.
