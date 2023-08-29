@@ -25,7 +25,7 @@ BLoC pattern, enabling you to create clear and maintainable code.
 
 - **StatelessBlocWidget:** Designed for the creation of stateless widgets that work harmoniously with BLoCs. Subclassing this abstract class simplifies the process of integrating BLoCs into widgets and ensures that your UI remains responsive and up-to-date.
 
-[![Bloc Widget Architecture Demo](https://youtube.com/shorts/AtTm9fgdTXU?feature=share)]
+![Bloc Widget Architecture Demo](https://user-images.githubusercontent.com/39815310/264117964-70c4edda-da3b-48bf-851a-3d488e35d08b.gif)
 
 ## Usage
 
