@@ -1,16 +1,3 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
-
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
 # Bloc Widget Architecture
 An architecture that introduces a powerful and organized approach to 
 building flutter applications. This package provides an assortment 
@@ -28,7 +15,7 @@ BLoC pattern, enabling you to create clear and maintainable code.
 ![Bloc Widget Architecture Demo](https://user-images.githubusercontent.com/39815310/264117964-70c4edda-da3b-48bf-851a-3d488e35d08b.gif)
 
 ## Usage
-BaseArchBloc:
+### BaseArchBloc
 ```dart
 class ScreenBloc extends BaseArchBloc<ScreenState> {
    ScreenBloc()
@@ -73,7 +60,7 @@ extension ScreenStateCopyWith on ScreenState {
 class SomeEvent {}
 ```
 
-StatefulBlocWidget
+### StatefulBlocWidget
 ```dart
 class ScreenStatefulBlocWidget extends StatefulBlocWidget {
   const ScreenStatefulBlocWidget({super.key, required this.someString});
@@ -119,7 +106,7 @@ class ScreenStatefulBlocWidgetState
              ),
              ElevatedButton(
                 onPressed: () {
-                   bloc.eventBus.fire(ScreenEvent());
+                   bloc.eventBus.fire(SomeEvent());
                 },
                 child: Text('press me'),
              ),
@@ -130,7 +117,7 @@ class ScreenStatefulBlocWidgetState
 }
 ```
 
-StatelessBlocWidget:
+### StatelessBlocWidget
 ```dart
 class Screen extends StatelessBlocWidget<ScreenBloc, ScreenState> {
   const Screen({super.key});
@@ -175,68 +162,14 @@ TODO: List prerequisites and provide or point to information on how to
 start using the package.
 
 ## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+This package was developed with modularity and scalability in mind.
+It works great with flutter_modular (it was originally developed in a project utilizing it).
 
 
 
+## License
 
-Of course! Here's the updated package description for the "bloc_widget_arch" package, focused on the Bloc Widget Architecture:
-
----
-
-**Package Name:** bloc_widget_arch
-
-**Description:** The `bloc_widget_arch` package introduces a powerful and organized approach to building Flutter applications using the Bloc Widget Architecture. This package provides an assortment of abstract classes and utilities that seamlessly integrate with the BLoC pattern, enabling you to create clear and maintainable code.
+This project is licensed under the terms of the MIT License. See the [LICENSE](LICENSE) file for details.
 
 
-**Usage:**
-
-1. **BlocWidget:**
-   ```dart
-   abstract class MyBlocWidget extends BlocWidget<MyBloc, MyState> {
-     // Implement widget-specific behavior here
-     // ...
-   }
-   ```
-
-2. **StatefulBlocWidget:**
-   ```dart
-   class MyStatefulWidget extends StatefulBlocWidget<MyBloc, MyState> {
-     @override
-     MyBloc createBloc() => MyBloc();
-
-     @override
-     Widget onBuild(BuildContext context, MyState state) {
-       // Define your widget content based on the current state
-       return // Your widget content here
-     }
-   }
-   ```
-
-3. **StatelessBlocWidget:**
-   ```dart
-   class MyStatelessWidget extends StatelessBlocWidget<MyBloc, MyState> {
-     const MyStatelessWidget({Key? key, required MyBloc bloc}) : super(key: key, bloc: bloc);
-
-     @override
-     Widget onBuild(BuildContext context, MyState state) {
-       // Define your widget content based on the current state
-       return // Your widget content here
-     }
-   }
-   ```
-
-**Why Choose `bloc_widget_arch`:**
-
-The `bloc_widget_arch` package is a vital tool for constructing Flutter applications with precision and efficiency. By implementing the Bloc Widget Architecture, your codebase becomes organized and modular, resulting in enhanced maintainability and code clarity.
-
-**License:** MIT License
-
-**Author:** [Your Name]
-
----
-
-Feel free to customize this description further to accurately reflect the features and benefits of your "bloc_widget_arch" package. Replace `[Your Name]` with your actual name or your organization's name. This description should help users understand how your package enhances their Flutter development experience through the Bloc Widget Architecture.
+**Author:** [Cody L. Bainter]
